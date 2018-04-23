@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, j, w, sum = 0;
+    for(w = 0 ; w < 3 ; w++ )
+    {
+        for(i = 5-w ; i > 0 ; i--)
+        {
+            for(j = i ; j > 0 ; j--)
+            {
+                printf("*");
+                sum = sum + 1;
+            }
+        printf("\n");
+        }
+    }
+    printf("Liczba uzytych znaków to %d.\n", sum);
+    return 0;
+}
