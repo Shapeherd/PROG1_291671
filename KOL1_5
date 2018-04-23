@@ -2,10 +2,10 @@
 
 int main()
 {
-    int i, j, w, sum = 0;
-    for(w = 0 ; w < 3 ; w++ )
+    int i, j, k, w = 3, sum = 0;
+    for(k = 0 ; k < w ; k++ )
     {
-        for(i = 5-w ; i > 0 ; i--)
+        for(i = 5-k ; i > 0 ; i--)
         {
             for(j = i ; j > 0 ; j--)
             {
