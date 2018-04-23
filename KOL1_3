@@ -14,5 +14,6 @@ int main()
         scanf("%c", &t);
     }
     while(t == 'y');
+    printf("Koniec dzialania programu.\n");
     return 0;
 }
