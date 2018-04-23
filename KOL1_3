@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    float x;
+    char t='y';
+    do
+    {
+        printf("Podaj dlugosc w cm:\n");
+        scanf("%f", &x);
+        printf("%.2fcm to %.2fin i %.2fft\n", x, x/2.54, (x/2.54)/12);
+        printf("Czy chcesz dokonac kolejnej zamiany?(y/n)");
+        getchar();
+        scanf("%c", &t);
+    }
+    while(t == 'y');
+    return 0;
+}
