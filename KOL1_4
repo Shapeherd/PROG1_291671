@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int pkt;
+    float pensja;
+    char t='y';
+    do
+    {
+        printf("Podaj ilosc punktow i pensje oddzielone spacja:\n");
+        scanf("%d", &pkt);
+        scanf("%f", &pensja);
+        if(pkt >= 0 && pkt <= 40)
+            printf("Twoja ocena to 1, wartosc premii to %.0f. ", (pensja*0.05)*0.2);
+        else if(pkt >= 41 && pkt <= 65)
+            printf("Twoja ocena to 2, wartosc premii to %.0f. ", (pensja*0.05)*0.5);
+        else if(pkt >= 66 && pkt <= 90)
+            printf("Twoja ocena to 3, wartosc premii to %.0f. ", (pensja*0.05)*0.9);
+        else if(pkt >= 91 && pkt <= 100)
+            printf("Twoja ocena to 4, wartosc premii to %.0f. ", (pensja*0.05)*1.3);
+        else 
+            printf("Wprowadziles niepoprawna wartosc punktow. ");
+        printf("Czy chcesz dokonac kolejnego obliczenia?(y/n)");
+        getchar();
+        scanf("%c", &t);
+    }
+    while(t == 'y');
+    return 0;
+}
