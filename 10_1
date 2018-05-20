@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+float mTOyd(float distance)
+{
+    return distance/0.9144;
+}
+
+float ydTOft(float distance)
+{
+    return distance*3;
+}
+
+int main()
+{
+    int choice;
+    float value;
+    printf("Enter 0 to convert m to yd; 1 to convert yd to ft: ");
+    scanf("%d", &choice);
+    printf("Enter distance to calculate: ");
+    scanf("%f", &value);
+    if (choice == 0)
+        printf("%.2f m is %.2f yard(s).\n", value, mTOyd(value));
+        else if (choice == 1)
+            printf("%.2f yd is %.2f feet(s).\n", value, ydTOft(value));
+        else
+            printf("Wrong command.\n");
+    return 0;
+}
