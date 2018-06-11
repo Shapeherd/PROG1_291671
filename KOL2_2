@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+void mile_na_metry(float value)
+{
+    printf("%.2f mile to %.2f metrow.", value, value*1609.344);
+    
+}
+
+void metry_na_mile(float value)
+{
+    printf("%.2f metry to %.2f mil(i).", value, value/1609.344);
+}
+
+int main()
+{
+    int tab_met[4] = {500, 1000, 1500, 2000};
+    float tab_mil[4] = {0.31, 0.62, 0.93, 1.24};
+    int i;
+    float value;
+    for (i = 0 ; i < 4 ; i ++)
+        printf("%d metrow to %.2f mili\n", tab_met[i], tab_mil[i]);
+    char choice;
+    do
+    {
+       printf("0 - mile na metry, 1 - metry na mile. Wybierz 0 lub 1.\n");
+       scanf("%d", &i);
+       scanf("%f", &value);
+       if (i == 0)
+        mile_na_metry(value);
+       if (i == 1)
+        metry_na_mile(value);
+       printf(" Czy kontynuowac obliczenia(y/n)?");
+       getchar();
+       scanf("%c", &choice);
+    } while (choice=='y');
+    printf("Koniec dzialania programu.");
+    return 0;
+}
